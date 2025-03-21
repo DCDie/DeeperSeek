@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 
+
 @dataclass
 class LoginSelectors:
     email_input: str = 'input[type="text"]'
@@ -9,9 +10,9 @@ class LoginSelectors:
 
 @dataclass
 class InteractionSelectors:
-    textbox: str = 'textarea[class="c92459f0"]'
+    textbox: str = 'textarea[class="_27c9245"]'
     send_options_parent: str = 'div[class="ec4f5d61"]'
-    send_button: str = 'div[class="f6d670"]'
+    send_button: str = 'div[class="_6f28693"]'
     response_toolbar: str = 'div[class="ds-flex abe97156"]'
     reset_chat_button: str = 'div[class="e214291b"]'
     search_results: str = 'div[class="fe369d61 f529c936"]'
@@ -23,8 +24,8 @@ class InteractionSelectors:
 
 @dataclass
 class BackendSelectors:
-    response_generating: str = 'div[class="f9bf7997 d7dc56a8"]'
-    response_generated: str = 'div[class="f9bf7997 d7dc56a8 c05b5566"]'
+    response_generating: str = 'div[class="_4f9bf79 d7dc56a8"]'
+    response_generated: str = 'div[class="_4f9bf79 d7dc56a8 _43c05b5"]'
     regen_loading_icon: str = 'div[class="ds-loading b4e4476b"]'
     response_toolbar_b64: str = 'ds-flex abe97156'  # This is different, because it's used in BS4
 

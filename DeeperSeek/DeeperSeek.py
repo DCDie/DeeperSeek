@@ -220,9 +220,10 @@ class DeepSeek:
         password_input = await self.browser.main_tab.select(self.selectors.login.password_input)
         await password_input.send_keys(self._password)
 
-        self.logger.debug("Checking the confirm checkbox and logging in...")
-        confirm_checkbox = await self.browser.main_tab.select(self.selectors.login.confirm_checkbox)
-        await confirm_checkbox.click()
+        if self._attempt_cf_bypass:
+            self.logger.debug("Checking the confirm checkbox and logging in...")
+            confirm_checkbox = await self.browser.main_tab.select(self.selectors.login.confirm_checkbox)
+            await confirm_checkbox.click()
 
         login_button = await self.browser.main_tab.select(self.selectors.login.login_button)
         await login_button.click()
